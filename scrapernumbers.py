@@ -30,11 +30,11 @@ def builddict(anoid):
 
 option = Options()
 option.headless = True
-driver = webdriver.Firefox(options=option)
+driver = webdriver.Firefox()     # (options=option)
 
-lista_anos = (2020, 2019)
+# lista_anos = (2020, 2019)
 dictresult = {}
-for ano in lista_anos:
+for ano in range(2014, 2019):
     dictresult[f'{ano}'] = builddict(ano)
     print(ano, len(dictresult[f'{ano}']))
 driver.quit()
